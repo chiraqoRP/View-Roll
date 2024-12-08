@@ -7,7 +7,7 @@ local eGetMoveType = ENTITY.GetMoveType
 local enabled = CreateClientConVar("cl_cview_viewroll_enabled", 0, true, false, "", 0, 1)
 local intensity = CreateClientConVar("cl_cview_viewroll_intensity", 1.0, true, false, "", 0.1, 10)
 
-hook.Add("CalcView", "CView", function(ply, origin, angles, fov, zNear, zFar)
+hook.Add("CalcView", "ViewRoll", function(ply, origin, angles, fov, zNear, zFar)
     if !enabled:GetBool() or ply != aGetViewEntity() or pInVehicle(ply) then
         return
     end
