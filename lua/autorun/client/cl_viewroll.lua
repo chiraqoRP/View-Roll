@@ -4,7 +4,7 @@ local aGetViewEntity = GetViewEntity
 local pInVehicle = PLAYER.InVehicle
 local eGetVelocity = ENTITY.GetVelocity
 local eGetMoveType = ENTITY.GetMoveType
-local enabled = CreateClientConVar("cl_viewroll", 0, true, false, "Enables/disables view roll.", 0, 1)
+local enabled = CreateClientConVar("cl_viewroll", 1, true, false, "Enables/disables view roll.", 0, 1)
 local intensity = CreateClientConVar("cl_viewroll_intensity", 1.0, true, false, "Controls view roll intensity.", 0.1, 10)
 
 hook.Add("CalcView", "ViewRoll", function(ply, origin, angles, fov, zNear, zFar)
